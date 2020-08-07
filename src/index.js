@@ -8,6 +8,7 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 // any component that we wrap in Prodiver will have access to our redux store, wrap our app in here
 import { Provider } from 'react-redux'
+import itemReducer from './reducers/itemReducer'
 
 import App from './App';
 
@@ -18,10 +19,10 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 // and our reducer is responsible for taking in that action object and deciding based on the way that you have 
 // set up your reducer it will have those conditions in there, deciding what we want to update about or current 
 // store. The reducer will return a new version of that store.
-let reducer  = ''
 
-// Where you store your data globally
-let myStore = createStore(reducer, composeEnhancers(applyMiddleware(thunk))) 
+
+// Where you store your data globally, dispatch sends over the action object to the itemReducer which inturn updates the store
+let myStore = createStore(itemReducer, composeEnhancers(applyMiddleware(thunk))) 
 
 // allows us to 
 
