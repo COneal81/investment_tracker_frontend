@@ -7,5 +7,9 @@
 //  - should always be an object{}, set it up as an object with an items key pointing to an empty array
 export default function itemReducer(state = {items:[]}, action) {
     
-    return state
+   
+
+    return action.payload
+    // This was to make certain that our action was coming in correctly, and that the
+    // store could properly be updated by our reducer
 }
