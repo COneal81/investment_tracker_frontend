@@ -5,8 +5,12 @@
 // returns a function from the action creator that you can use it other places easily
 
 export function fetchItems(action) {
-    // fetch('http://127.0.0.1:3000/api/v1/items')
-    // .then(resp => resp.json())
-    // .then(data =>(console.log(data)))
-   
+    return (dispatch) => {
+        fetch('http://127.0.0.1:3000/api/v1/items')
+    .then(resp => resp.json())
+    .then(items => dispatch({
+        type:"FETCH_ITEMS",
+        payload: items
+    }))
+    }
 }

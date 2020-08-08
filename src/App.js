@@ -30,7 +30,7 @@ class App extends React.Component {
 //   }
 // }
 
-export default connect()(App);
+export default App;
 // mapDIspatchToProps - gives us the abiity to update our store from this component
 //  - can also be passed as an action creator like {fetchItems}
 

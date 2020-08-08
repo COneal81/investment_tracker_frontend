@@ -7,11 +7,13 @@ import React from 'react'
 // thru props
 // cannot have a render inside a functional component.  must have a return
 
-
+// 
 const Items = (props) => {
+
     return (
         <div>
-            List of Items
+            {props.items.map(item => 
+               <li> {item.item_name} <br></br>  ${item.purchase_price}<br></br><br></br></li> )}
         </div>
     )
 
