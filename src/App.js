@@ -2,19 +2,19 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import {connect} from 'react-redux'
-import {fetchItems} from './actions/fetchitems'
+
+import ItemsContainer from './containers/ItemsContainers'
 
 class App extends React.Component {
 
-  componentDidMount() {
-    this.props.fetchItems({type: 'FETCH_ITEMS', payload: {item_name: "Desk"}})
-  }
+ 
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
          <h1>Investment Tracker</h1>
+         <ItemsContainer/>
         </header>
       </div>
     );
@@ -30,7 +30,7 @@ class App extends React.Component {
 //   }
 // }
 
-export default connect(null, {fetchItems})(App);
+export default connect()(App);
 // mapDIspatchToProps - gives us the abiity to update our store from this component
 //  - can also be passed as an action creator like {fetchItems}
 
@@ -42,3 +42,4 @@ export default connect(null, {fetchItems})(App);
 // behind the scenes acutmatically with connect)
 // 
 // 
+// A App can also be a container depending on how you set it up.
