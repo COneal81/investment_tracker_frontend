@@ -12,8 +12,9 @@ const Items = (props) => {
 
     return (
         <div>
+            {/* everytime you iterate, make sure to put a key prop in the html element or else you will get a warning  */}
             {props.items.map(item => 
-               <li> {item.item_name} <br></br>  ${item.purchase_price}<br></br><br></br></li> )}
+               <li key={item.id}> {item.item_name} <br></br>  ${item.purchase_price}<br></br><br></br></li> )}
         </div>
     )
 
