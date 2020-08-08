@@ -1,11 +1,17 @@
 import React from 'react'
+import Items from '../components/Items'
+import ItemInput from '../components/ItemInput'
 
+// class components allow you to call this.props
+// 
 class ItemsContainer extends React.Component {
     // because it is a class, you use the curley brackets and must have a render()
     render() {
         return (
             <div>
-                Items Container
+                
+                <ItemInput/>
+                <Items/>
             </div>
         )
     }

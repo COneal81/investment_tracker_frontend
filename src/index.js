@@ -21,7 +21,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 // store. The reducer will return a new version of that store.
 
 
-// Where you store your data globally, dispatch sends over the action object to the itemReducer which inturn updates the store
+// Where you store your data globally, dispatch sends over the action objectimported  to the itemReducer which inturn updates the store
 let myStore = createStore(itemReducer, composeEnhancers(applyMiddleware(thunk))) 
 
 // allows us to 
