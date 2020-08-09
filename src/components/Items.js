@@ -1,5 +1,7 @@
 import React from 'react'
+import {Route, Link} from 'react-router-dom'
 import Item from './Item'
+
 
 // functional b/c it is just presenting a list of items
 // setup a functional component as a regular function.  prefer arrow functions.
@@ -12,15 +14,21 @@ import Item from './Item'
 const Items = (props) => {
 
     return (
+        // calling Item in the div passes the child thru props down to the show page to be able to render each 
+            // items attributes on its own page.
         <div>
             {/* everytime you iterate, make sure to put a key prop in the html element or else you will get a warning  */}
+           
+
+
+
+
             {props.items.map(item => 
-            // calling Item in the div passes the child thru props down to the show page to be able to render each 
-            // items attributes on its own page.
-            <div key={item.id}><Item item={item}/> </div>
-            // <li key ={item.id}>
-            //    <link to={`/items/${item.id}`}> {item.item_name} <br></br>  ${item.purchase_price}<br></br><br></br></link> 
-            // </li> 
+           
+            <li key={item.id}> 
+            <Link to={`/items/${item.id}`}> {item.item_name} -  ${item.purchase_price}<br></br> </Link> 
+            </li>
+            
             )}
         </div>
     )

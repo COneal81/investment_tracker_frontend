@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Route} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import Item from '../components/Item'
 import Items from '../components/Items'
 import ItemInput from '../components/ItemInput'
@@ -19,15 +19,19 @@ class ItemsContainer extends React.Component {
     render() {
         return (
             <div>
+                <Switch>
+                {/* Switch returns the first match, order matters */}
                 {/* When you use routes, you are not longer rendering the components directly. */}
                 {/* They will be conditionally renders under the url */}
-                <Route path='/items/new' component={ItemInput}/>
+                
                 {/* RouterProps brings in the individual id attrubute to be able to link to the show page */}
-                <Route path= '/item/:id' render={(routerProps) => <Item {...routerProps} items={this.props.items}/>}/>
-                <Route exact path='/items' render={(routerProps) => <Items {...routerProps} items={this.props.items}/>}/>
+                <Route path='/items/new' component={ItemInput}/>
+                <Route path= '/items/:id' render={(routerProps) => <Item {...routerProps} items={this.props.items}/>}/>
+                
+                <Route path='/items' render={(routerProps) => <Items {...routerProps} items={this.props.items}/>}/>
                 {/*below is how you pass the props down to the items component */}
                 {/* <Items items={this.props.items}/> */}
-
+                </Switch>
             </div>
         )
     }
