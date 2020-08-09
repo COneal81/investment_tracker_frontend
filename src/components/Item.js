@@ -1,6 +1,7 @@
 // functional component becuase it is getting the props and not changing the state.
 import React from 'react'
 import {Redirect} from 'react-router-dom'
+import ExpensesContainer from '../containers/ExpensesContainer'
 
 
 const Item = (props) => {
@@ -17,7 +18,7 @@ const Item = (props) => {
             <h3>{item ? item.item_name : null}</h3><br></br>
             {item ? item.purchase_price : null}<br></br>
             {item ? item.date_purchased : null}
-           
+           <ExpensesContainer/>
         </div>
     )
 

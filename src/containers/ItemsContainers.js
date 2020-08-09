@@ -6,6 +6,7 @@ import Items from '../components/Items'
 import ItemInput from '../components/ItemInput'
 import {fetchItems} from '../actions/fetchItems'
 
+
 // class components allow you to call this.props
 // 
 class ItemsContainer extends React.Component {
