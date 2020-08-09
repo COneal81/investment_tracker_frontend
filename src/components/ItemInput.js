@@ -48,15 +48,15 @@ class ItemInput extends React.Component {
                 <form onSubmit={this.handleOnSubmit}>
                 <label> Enter an Item</label><br></br>
                 <input type="text" placeholder="Item Name" value={this.state.item_name} name="item_name" onChange = {this.handleOnChange}/> 
-                <label> Purchase Price</label><br></br>
+                {/* <label> Purchase Price</label><br></br> */}
                 <input type="text" placeholder="Purchase Price" value={this.state.purchase_price} name="purchase_price" onChange = {this.handleOnChange}/> 
-                <label> Date Purchased</label><br></br>
+                {/* <label> Date Purchased</label><br></br> */}
                 <input type="text" placeholder="Date Purchased" value={this.state.date_purchased} name="date_purchased" onChange = {this.handleOnChange}/> 
-                <label> Date Sold</label><br></br>
+                {/* <label> Date Sold</label><br></br> */}
                 <input type="text" placeholder="Date Sold" value={this.state.date_sold} name="date_sold" onChange = {this.handleOnChange}/> 
                 {/* <label> Sold</label><br></br>
                 <input type="checkbox" checked={this.setState.checked} placeholder="Sold" value={this.state.sold} name="sold" onChange = {this.handleOnChange}/>  */}
-                <label> Breakeven Point</label><br></br>
+                {/* <label> Breakeven Point</label><br></br> */}
                 <input type="text" placeholder="Breakeven Point" value={this.state.breakeven_point} name="breakeven_point" onChange = {this.handleOnChange}/> 
                 <input type="submit"/>
                 
