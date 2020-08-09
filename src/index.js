@@ -9,6 +9,8 @@ import thunk from 'redux-thunk'
 // any component that we wrap in Prodiver will have access to our redux store, wrap our app in here
 import { Provider } from 'react-redux'
 import itemReducer from './reducers/itemReducer'
+// using BrowserRouter but calling it Router
+import {BrowserRouter as Router} from 'react-router-dom'
 
 import App from './App';
 
@@ -29,8 +31,11 @@ let myStore = createStore(itemReducer, composeEnhancers(applyMiddleware(thunk)))
 ReactDOM.render(
   // store={myStore} gives our app access to our store
   <Provider store={myStore}>
-    <App />
+  {/* Wraping our Router gives our App and all of its child components access to setting up links  */}
+    <Router>
+      <App/>
     {/* any component child of App will have access to the store */}
+    </Router>
   </Provider>,
   document.getElementById('root')
 );

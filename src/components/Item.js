@@ -3,10 +3,18 @@ import React from 'react'
 
 
 const Item = (props) => {
-    console.log(props)
+    
+
+    let item = props.items[props.match.params.id -1]
+    
     return(
         <div> 
-            <li>{props.item.item_name} - {props.item.purchase_price}</li>
+            {/* used a ternary operator because the 1st time the props are 
+            // coming through, we do not have access to the props  */}
+            <h3>{item ? item.item_name : null}</h3><br></br>
+            {item ? item.purchase_price : null}<br></br>
+            {item ? item.date_purchased : null}
+           
         </div>
     )
 

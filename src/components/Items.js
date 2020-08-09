@@ -15,6 +15,8 @@ const Items = (props) => {
         <div>
             {/* everytime you iterate, make sure to put a key prop in the html element or else you will get a warning  */}
             {props.items.map(item => 
+            // calling Item in the div passes the child thru props down to the show page to be able to render each 
+            // items attributes on its own page.
             <div key={item.id}><Item item={item}/> </div>
             // <li key ={item.id}>
             //    <link to={`/items/${item.id}`}> {item.item_name} <br></br>  ${item.purchase_price}<br></br><br></br></link> 
