@@ -1,10 +1,15 @@
 export default function itemReducer(state = {items: []}, action) {
     
     switch (action.type) {
-        case "FETCH_ITEMS":
-        return {items: action.payload}
         // you are returning an object with a key of items: that points to an array.  You bring items in from 
         // the initial arguement
+        case "FETCH_ITEMS":
+            return {items: action.payload}
+        case "ADD_ITEM":
+            // use the spread operator ...state to ensure that you always get everything back,
+            // items it the key that points to an array that is returning the previous state with all 
+            // of the items along with the new item that is being brought in with action.payload 
+            return {...state, items: [...state.items, action.payload]}
        
     
         // this will always return a version of the state, even if it is empty
