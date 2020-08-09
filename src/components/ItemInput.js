@@ -31,6 +31,15 @@ class ItemInput extends React.Component {
         event.preventDefault()
         // here you are passing in the state as an arguement to the actionCreator addItem
         this.props.addItem(this.state)
+        // calling setState clears the form and sets it back to the initial values for a user to be able to enter a new item
+        this.setState({
+            item_name: "",
+            purchase_price: "",
+            date_purchased: "",
+            date_sold: "",
+            // sold: "false",
+            breakeven_point: ""
+        })
     }
 
     render() {
