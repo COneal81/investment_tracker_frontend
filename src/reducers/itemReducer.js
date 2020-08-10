@@ -11,14 +11,24 @@ export default function itemReducer(state = {items: []}, action) {
             // of the items along with the new item that is being brought in with action.payload 
             return {...state, items: [...state.items, action.payload]}
        case "ADD_EXPENSE":
-        let items = state.items.map(item => {
+            let items = state.items.map(item => {
+                if (item.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return item
+                }
+            })
+            return {...state, items: items}
+        case "DELETE_EXPENSE":
+        let delete_item = state.items.map(item => {
             if (item.id === action.payload.id) {
                 return action.payload
             } else {
                 return item
             }
         })
-        return {...state, items: items}
+        return {...state, items: delete_item}
+
     default:
     return state
     }
