@@ -17,15 +17,15 @@ class ExpenseInput extends React.Component {
     }
 
     handleOnSubmit = (event) => {
-        event.preventDefault();
+        event.preventDefault()
         // sending this.state that has all of the input info from the form
         // sending this.props.id so the expense knows which item it belongs to
         this.props.addExpense(this.state, this.props.item.id)
-        this.state = {
+        this.setState({
             destription: "",
             expense_amount: "",
             date: ""
-        }
+        })
     }
 
     // values and names are what makes if a controlled form.
