@@ -2,6 +2,7 @@
 import React from 'react'
 import {Redirect} from 'react-router-dom'
 import ExpensesContainer from '../containers/ExpensesContainer'
+import ItemEdit from './ItemEdit'
 
 // The expensesContainer can receive info about this item that is rendering it and the expensescontainer can send the data 
 // down to the expenses component and expenses input
@@ -23,6 +24,7 @@ const Item = (props) => {
             {item ? item.date_purchased : null}
             {/* we can send props down to the expensesContainer which it can then pass down props to the expenses  */}
            <ExpensesContainer item={item}/>
+           <ItemEdit item={item}/>
         </div>
     )
 

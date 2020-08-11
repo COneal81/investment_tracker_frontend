@@ -1,5 +1,5 @@
 export default function itemReducer(state = {items: []}, action) {
-  
+//    debugger;
     switch (action.type) {
         // you are returning an object with a key of items: that points to an array.  You bring items in from 
         // the initial arguement
@@ -19,6 +19,7 @@ export default function itemReducer(state = {items: []}, action) {
                 }
             })
             return {...state, items: items}
+
         case "DELETE_EXPENSE":
         let delete_item = state.items.map(item => {
             if (item.id === action.payload.id) {
@@ -28,6 +29,16 @@ export default function itemReducer(state = {items: []}, action) {
             }
         })
         return {...state, items: delete_item}
+
+        case "EDIT_ITEM":
+        let edit_item = state.items.map(item => {
+            if (item.id === action.payload.id) {
+                return action.payload
+            } else {
+                return item
+            }
+        })
+        return {...state, items: edit_item}
 
     default:
     return state
