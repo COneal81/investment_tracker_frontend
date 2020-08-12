@@ -7,15 +7,16 @@ import {editItem} from '../actions/editItem'
 class ItemEdit extends React.Component {
     // this is a controlled form
     // this is done by seting a local state, not redux store.  
-
-    state = {
-        item_name: "",
-        purchase_price: "",
-        date_purchased: "",
-        date_sold: "",
+constructor(props) { 
+    super(props);
+    this.state = {
+        item_name: props.item_name,
+        purchase_price: props.purchase_price,
+        date_purchased: props.date_purchased,
+        date_sold: props.date_sold,
         // sold: "false",
-        breakeven_point: ""
     }
+}
 
     handleOnChange = (event) => {
         this.setState({
@@ -29,9 +30,10 @@ class ItemEdit extends React.Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault()
-       
+    //    debugger
         // sending in an object of our state and the props that we are sending and the id of our item
         let item = {...this.state, id: this.props.item.id}
+        // debugger
         // sending to the actionCreatpr
         this.props.editItem(item)
         // debugger
@@ -50,7 +52,7 @@ class ItemEdit extends React.Component {
         return (
             <div> 
                 <form onSubmit={this.handleOnSubmit}>
-                <label> Edit an Item</label><br></br>
+                <label> Edit Item</label><br></br>
                 <input type="text" placeholder="Item Name" value={this.state.item_name} name="item_name" onChange = {this.handleOnChange}/> 
                 {/* <label> Purchase Price</label><br></br> */}
                 <input type="text" placeholder="Purchase Price" value={this.state.purchase_price} name="purchase_price" onChange = {this.handleOnChange}/> 
@@ -60,8 +62,7 @@ class ItemEdit extends React.Component {
                 <input type="text" placeholder="Date Sold" value={this.state.date_sold} name="date_sold" onChange = {this.handleOnChange}/> 
                 {/* <label> Sold</label><br></br>
                 <input type="checkbox" checked={this.setState.checked} placeholder="Sold" value={this.state.sold} name="sold" onChange = {this.handleOnChange}/>  */}
-                {/* <label> Breakeven Point</label><br></br> */}
-                <input type="text" placeholder="Breakeven Point" value={this.state.breakeven_point} name="breakeven_point" onChange = {this.handleOnChange}/> 
+                
                 <input type="submit"/>
                 
                 </form>

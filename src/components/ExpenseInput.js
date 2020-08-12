@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {addExpense} from '../actions/addExpense'
 
+
 class ExpenseInput extends React.Component {
 
     state = {

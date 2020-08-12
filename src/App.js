@@ -2,7 +2,7 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import {connect} from 'react-redux'
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 import ItemsContainer from './containers/ItemsContainers'
 
 class App extends React.Component {
@@ -13,7 +13,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-         <h1>Investment Tracker</h1>
+         
          <ItemsContainer/>
         </header>
       </div>

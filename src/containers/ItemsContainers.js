@@ -5,6 +5,7 @@ import Item from '../components/Item'
 import Items from '../components/Items'
 import ItemInput from '../components/ItemInput'
 import {fetchItems} from '../actions/fetchItems'
+import NavBar from '../components/NavBar'
 
 
 // class components allow you to call this.props
@@ -20,6 +21,7 @@ class ItemsContainer extends React.Component {
     render() {
         return (
             <div>
+                <NavBar/>
                 <Switch>
                 {/* Switch returns the first match, order matters */}
                 {/* When you use routes, you are not longer rendering the components directly. */}
