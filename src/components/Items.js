@@ -1,7 +1,7 @@
 import React from 'react'
 import {Route, Link} from 'react-router-dom'
 import Item from './Item'
-// import {Table} from 'react-bootstrap';
+
 import Table from 'react-bootstrap/Table'
 
 // functional b/c it is just presenting a list of items
@@ -20,7 +20,7 @@ const Items = (props) => {
         <div>
             {/* everytime you iterate, make sure to put a key prop in the html element or else you will get a warning  */}
                 
-                <Table responsivestriped hover variant="dark" size="sm">
+                <Table responsive striped hover variant="dark" size="sm">
                 
                 <thead>
                   <tr >

@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addItem} from '../actions/addItem'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
 // class component that has a local state that holds the core values
 
@@ -45,22 +47,87 @@ class ItemInput extends React.Component {
     render() {
         return (
             <div> 
-                <form onSubmit={this.handleOnSubmit}>
+                <Form onSubmit={this.handleOnSubmit}>
+  <Form.Group controlId= "ItemInput.ControlInput1">
+    <Form.Label>Item </Form.Label>
+    <Form.Control 
+        type="text" 
+        placeholder="Item Name" 
+        value={this.state.item_name} 
+        name="item_name" 
+        onChange = {this.handleOnChange}
+    /> <br></br>
+    <Form.Control 
+        type="text" 
+        placeholder="Purchase Price"
+        value={this.state.purchase_price}
+        name="purchase_price"
+        onChange = {this.handleOnChange}
+    />
+    <br></br>
+    <Form.Control
+        type="text"
+        placeholder="Date Purchased"
+        value={this.state.date_purchased}
+        name="date_purchased"
+        onChange = {this.handleOnChange}
+    />
+    <br></br>
+    <Form.Control
+        type="text"
+        placeholder="Date Sold"
+        value={this.state.date_sold}
+        name="date_sold"
+        onChange = {this.handleOnChange}
+    />  
+<br></br>
+  </Form.Group>
+  {/* <Form.Group controlId="exampleForm.ControlSelect1">
+    <Form.Label>Example select</Form.Label>
+    <Form.Control as="select">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </Form.Control>
+  </Form.Group>
+  <Form.Group controlId="exampleForm.ControlSelect2">
+    <Form.Label>Example multiple select</Form.Label>
+    <Form.Control as="select" multiple>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </Form.Control>
+  </Form.Group> */}
+  {/* <Form.Group controlId="exampleForm.ControlTextarea1">
+    <Form.Label>Example textarea</Form.Label>
+    <Form.Control as="textarea" rows="3" />
+  </Form.Group> */}
+  <Button variant="primary" type="submit">
+    Submit
+  </Button>
+</Form>
+
+
+                {/* <form onSubmit={this.handleOnSubmit}>
                 <label> Enter an Item</label><br></br>
-                <input type="text" placeholder="Item Name" value={this.state.item_name} name="item_name" onChange = {this.handleOnChange}/> 
+                <input type="text" placeholder="Item Name" value={this.state.item_name} name="item_name" onChange = {this.handleOnChange}/>  */}
                 {/* <label> Purchase Price</label><br></br> */}
-                <input type="text" placeholder="Purchase Price" value={this.state.purchase_price} name="purchase_price" onChange = {this.handleOnChange}/> 
+                {/* <input type="text" placeholder="Purchase Price" value={this.state.purchase_price} name="purchase_price" onChange = {this.handleOnChange}/>  */}
                 {/* <label> Date Purchased</label><br></br> */}
-                <input type="text" placeholder="Date Purchased" value={this.state.date_purchased} name="date_purchased" onChange = {this.handleOnChange}/> 
+                {/* <input type="text" placeholder="Date Purchased" value={this.state.date_purchased} name="date_purchased" onChange = {this.handleOnChange}/>  */}
                 {/* <label> Date Sold</label><br></br> */}
-                <input type="text" placeholder="Date Sold" value={this.state.date_sold} name="date_sold" onChange = {this.handleOnChange}/> 
+                {/* <input type="text" placeholder="Date Sold" value={this.state.date_sold} name="date_sold" onChange = {this.handleOnChange}/>  */}
                 {/* <label> Sold</label><br></br>
                 <input type="checkbox" checked={this.setState.checked} placeholder="Sold" value={this.state.sold} name="sold" onChange = {this.handleOnChange}/>  */}
                 {/* <label> Breakeven Point</label><br></br> */}
-                <input type="text" placeholder="Breakeven Point" value={this.state.breakeven_point} name="breakeven_point" onChange = {this.handleOnChange}/> 
-                <input type="submit"/>
+                {/* <input type="text" placeholder="Breakeven Point" value={this.state.breakeven_point} name="breakeven_point" onChange = {this.handleOnChange}/>  */}
+                {/* <input type="submit"/> */}
                 
-                </form>
+                {/* </form> */}
                 
             </div>
         )
