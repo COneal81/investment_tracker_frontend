@@ -3,7 +3,7 @@ import React from 'react'
 import {Redirect} from 'react-router-dom'
 import ExpensesContainer from '../containers/ExpensesContainer'
 import ItemEdit from './ItemEdit'
-
+import Card from 'react-bootstrap/Card'
 // The expensesContainer can receive info about this item that is rendering it and the expensescontainer can send the data 
 // down to the expenses component and expenses input
 
@@ -15,18 +15,26 @@ const Item = (props) => {
     
     return(
         <div> 
-            
+            <br></br>
             {/* used a ternary operator because the 1st time the props are 
             // coming through, we do not have access to the props  */}
             
-            <h3>{item ? item.item_name : null}</h3><br></br>
-            {item ? item.purchase_price : null}<br></br>
-            {item ? item.date_purchased : null}
-            {/* we can send props down to the expensesContainer which it can then pass down props to the expenses  */}
-           <ExpensesContainer item={item}/>
-           <ItemEdit item={item}/>
+            <Card style={{ width: '18rem' }}>
+                <Card.Body>
+                    <Card.Title><h3>{item ? item.item_name : null}</h3></Card.Title>
+                        <Card.Subtitle className="mb-2 text-muted">Purchase Price: ${item ? item.purchase_price : null}</Card.Subtitle>
+                        <Card.Text>
+                            Date Purchased:{item ? item.date_purchased : null}<br></br>
+                            Breakeven if sold at: ${item ? item.breakeven_point : null}
+                            {/* we can send props down to the expensesContainer which it can then pass down props to the expenses  */}
+                        </Card.Text>
+                </Card.Body>
+            </Card>
+                <br></br><br></br>
+            <ItemEdit item={item}/>
+                <br></br><br></br>
+            <ExpensesContainer item={item}/>
         </div>
     )
-
 }
 export default Item

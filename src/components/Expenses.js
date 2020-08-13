@@ -1,6 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {deleteExpense} from '../actions/deleteExpense.js'
+import Table from 'react-bootstrap/Table'
+
+
 
 const Expenses = (props) => {
     // console.log(props.expenses)
@@ -15,12 +18,35 @@ const Expenses = (props) => {
     return (
         <div>
             <h3> Expenses </h3>
+             <Table responsive striped hover variant="dark" size="sm">
+                
+                <thead>
+                  <tr >
+                    <th>Expense Name</th>
+                    <th>Date Purchased</th>
+                    <th>Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+        
+                     {props.expenses && props.expenses.map(expense =>
+                  <tr>
+                    <td key={expense.id}>{expense.destription}</td>
+                    <td> {expense.date} </td>
+                    <td> ${expense.expense_amount} </td>
+                   
+                   <button onClick={() => handleDelete(expense)}>Delete</button>
+                  </tr>
+                 )}
+                </tbody>
+              </Table>
+            
             {/* The first time that props comes thru, the may be undefinied.  You may need to add in a check */}
-           {props.expenses && props.expenses.map(expense =>
+           {/* {props.expenses && props.expenses.map(expense =>
             <li key={expense.id}>{expense.destription} ~ ${expense.expense_amount} 
             <button onClick={() => handleDelete(expense)}>Delete</button>
             </li>
-            )}
+            )} */}
         </div>
     )
 }
