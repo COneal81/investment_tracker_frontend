@@ -1,7 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addExpense} from '../actions/addExpense'
-
+import Form from 'react-bootstrap/Form'
+import Container from 'react-bootstrap/Container'
+import Button from 'react-bootstrap/Button'
 
 class ExpenseInput extends React.Component {
 
@@ -33,17 +35,60 @@ class ExpenseInput extends React.Component {
     render() {
         return (
         <div>
-            <form onSubmit={this.handleOnSubmit}>
+            
+
+            <Container>
+                <Form onSubmit={this.handleOnSubmit}>
+                <Form.Group controlId= "ExpenseInput.ControlInput2">
+                <Form.Row className="expense-input">
+                    <Form.Label><h4>Add Expense</h4></Form.Label>
+                    <Form.Control 
+                        type="text" 
+                        placeholder="Expense Name" 
+                        value={this.state.destription} 
+                        name="destription" 
+                        onChange = {this.handleOnChange}
+                    /> 
+                    <br></br>
+
+                    <Form.Control 
+                        type="text" 
+                        placeholder="Amount" 
+                        value={this.state.expense_amount} 
+                        name="expense_amount" 
+                        onChange = {this.handleOnChange}
+                    />
+                    <br></br>
+
+                    <Form.Control
+                        type="text" 
+                        placeholder="Date" 
+                        value={this.state.date} 
+                        name="date" onChange = {this.handleOnChange}
+                    />
+                    <br></br>
+                    
+                    <Button variant="primary" type="submit">
+                        Submit
+                    </Button>
+                
+                </Form.Row>
+                </Form.Group>
+                </Form>
+            </Container>
+
+
+            {/* <form onSubmit={this.handleOnSubmit}>
                 <label> Enter an Expense</label><br></br>
                 <input type="text" placeholder="Expense Name" value={this.state.destription} name="destription" onChange = {this.handleOnChange}/> 
-                {/* <label> Amount </label><br></br> */}
+                <label> Amount </label><br></br>
                 <input type="text" placeholder="Amount" value={this.state.expense_amount} name="expense_amount" onChange = {this.handleOnChange}/> 
-                {/* <label> Date Purchased</label><br></br> */}
-                <input type="text" placeholder="Date" value={this.state.date} name="date" onChange = {this.handleOnChange}/> 
+                 <label> Date Purchased</label><br></br>
+                 <input type="text" placeholder="Date" value={this.state.date} name="date" onChange = {this.handleOnChange}/> 
                 
-                <input type="submit"/>
+                 <input type="submit"/>
                 
-            </form>
+            </form>  */}
         </div>
         )
     }
