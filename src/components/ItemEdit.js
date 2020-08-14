@@ -1,7 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {editItem} from '../actions/editItem'
-
+import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form'
+import Card from 'react-bootstrap/Card'
 // class component that has a local state that holds the core values
 
 class ItemEdit extends React.Component {
@@ -50,9 +52,63 @@ constructor(props) {
 
     render() {
         return (
+          
             <div> 
+                 {/* <Container>
+                <Form onSubmit={this.handleOnSubmit}>
+                <Form.Group controlId= "ItemEdit.ControlInput3">
+                <Form.Row className="expense-input">
+                    <Form.Label><h4>Edit Item</h4></Form.Label>
+                    <Form.Control 
+                        type="text" 
+                        placeholder="Item Name" 
+                        value={this.state.item_name} 
+                        name="item_name" 
+                        onChange = {this.handleOnChange}
+                    /> 
+                    <br></br>
+
+                    <Form.Control 
+                        type="text" 
+                        placeholder="Purchase Price" 
+                        value={this.state.purchase_price} 
+                        name="purchase_price" 
+                        onChange = {this.handleOnChange}
+                    />
+                    <br></br>
+
+                    <Form.Control
+                        type="text" 
+                        placeholder="Date Purchased" 
+                        value={this.state.date_purchased} 
+                        name="date_purchased" 
+                        onChange = {this.handleOnChange}
+                    />
+                    <br></br>
+                    
+                    <Form.Control
+                        type="text"
+                        placeholder="Date Sold"
+                        value={this.state.date_sold}
+                        name="date_sold"
+                        onChange = {this.handleOnChange}
+                    />  
+                    <Button variant="primary" type="submit">
+                        Submit
+                    </Button>
+                
+                </Form.Row>
+                </Form.Group>
+                </Form>
+            </Container> */}
+
+
+
+
+
+                {/* <Card.Body> */}
                 <form onSubmit={this.handleOnSubmit}>
-                <label> Edit Item</label><br></br>
+                <h3> Edit Item</h3><br></br>
                 <input type="text" placeholder="Item Name" value={this.state.item_name} name="item_name" onChange = {this.handleOnChange}/> 
                 {/* <label> Purchase Price</label><br></br> */}
                 <input type="text" placeholder="Purchase Price" value={this.state.purchase_price} name="purchase_price" onChange = {this.handleOnChange}/> 
@@ -60,14 +116,21 @@ constructor(props) {
                 <input type="text" placeholder="Date Purchased" value={this.state.date_purchased} name="date_purchased" onChange = {this.handleOnChange}/> 
                 {/* <label> Date Sold</label><br></br> */}
                 <input type="text" placeholder="Date Sold" value={this.state.date_sold} name="date_sold" onChange = {this.handleOnChange}/> 
-                {/* <label> Sold</label><br></br>
-                <input type="checkbox" checked={this.setState.checked} placeholder="Sold" value={this.state.sold} name="sold" onChange = {this.handleOnChange}/>  */}
-                
-                <input type="submit"/>
+                <br></br>
+                {/* {/* <label> Sold</label><br></br> */}
+                {/* <input type="checkbox" checked={this.setState.checked} placeholder="Sold" value={this.state.sold} name="sold" onChange = {this.handleOnChange}/>  */}
+                <Button variant="primary" size="sm" type="submit">
+                        Submit
+                    </Button>
+                {/* <input type="submit"/> */}
                 
                 </form>
-                
-            </div>
+                {/* </Card.Body> */}
+              
+            
+           
+                </div>
+               
         )
     }
 }

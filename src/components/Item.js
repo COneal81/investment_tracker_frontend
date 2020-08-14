@@ -1,6 +1,6 @@
 // functional component becuase it is getting the props and not changing the state.
 import React from 'react'
-import {Redirect} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import ExpensesContainer from '../containers/ExpensesContainer'
 import ItemEdit from './ItemEdit'
 import Card from 'react-bootstrap/Card'

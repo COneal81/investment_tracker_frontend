@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {addItem} from '../actions/addItem'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
 
 // class component that has a local state that holds the core values
 
@@ -47,9 +48,11 @@ class ItemInput extends React.Component {
     render() {
         return (
             <div> 
+                <br></br>
+                <Container>
                 <Form onSubmit={this.handleOnSubmit}>
   <Form.Group controlId= "ItemInput.ControlInput1">
-    <Form.Label>Item </Form.Label>
+    <Form.Label><h3>Add Item </h3></Form.Label>
     <Form.Control 
         type="text" 
         placeholder="Item Name" 
@@ -82,35 +85,12 @@ class ItemInput extends React.Component {
     />  
 <br></br>
   </Form.Group>
-  {/* <Form.Group controlId="exampleForm.ControlSelect1">
-    <Form.Label>Example select</Form.Label>
-    <Form.Control as="select">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </Form.Control>
-  </Form.Group>
-  <Form.Group controlId="exampleForm.ControlSelect2">
-    <Form.Label>Example multiple select</Form.Label>
-    <Form.Control as="select" multiple>
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </Form.Control>
-  </Form.Group> */}
-  {/* <Form.Group controlId="exampleForm.ControlTextarea1">
-    <Form.Label>Example textarea</Form.Label>
-    <Form.Control as="textarea" rows="3" />
-  </Form.Group> */}
+  
   <Button variant="primary" type="submit">
     Submit
   </Button>
 </Form>
-
+</Container>
 
                 {/* <form onSubmit={this.handleOnSubmit}>
                 <label> Enter an Item</label><br></br>
