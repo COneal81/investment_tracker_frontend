@@ -61,6 +61,13 @@ h2{
   color:#029cc7;
 }
 
+h6{
+  color:white;
+  align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .btn-primary{
   background-color:#61dafb !important;
   color:#282c34 !important;

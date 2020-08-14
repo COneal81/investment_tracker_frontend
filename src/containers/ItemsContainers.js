@@ -6,6 +6,7 @@ import Items from '../components/Items'
 import ItemInput from '../components/ItemInput'
 import {fetchItems} from '../actions/fetchItems'
 import NavBar from '../components/NavBar'
+import Home from '../components/Home'
 
 
 // class components allow you to call this.props
@@ -28,6 +29,7 @@ class ItemsContainer extends React.Component {
                 {/* They will be conditionally renders under the url */}
                 
                 {/* RouterProps brings in the individual id attrubute to be able to link to the show page */}
+                <Route path='/' component={Home}/>
                 <Route path='/items/new' component={ItemInput}/>
                 <Route path= '/items/:id' render={(routerProps) => <Item {...routerProps} items={this.props.items}/>}/>
                 
