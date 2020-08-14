@@ -7,7 +7,7 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+}2020-08-14-16-29-08.png
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -75,4 +75,18 @@ h6{
   background-color:#61dafb !important;
   color:#282c34 !important;
   border-color: #004c61 !important;
+}
+
+
+.navbar-brand{
+  display: flex;
+  float: left !important;
+  margin-top: -12px !important;
+  margin-bottom: -12px !important;
+ 
+  
+}
+
+.navbar{
+  color: #f4f4f5;
 }
