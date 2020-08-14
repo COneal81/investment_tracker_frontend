@@ -29,10 +29,9 @@ class ItemsContainer extends React.Component {
                 {/* They will be conditionally renders under the url */}
                 
                 {/* RouterProps brings in the individual id attrubute to be able to link to the show page */}
-                <Route path='/' component={Home}/>
+                <Route exact path='/' component={Home}/>
                 <Route path='/items/new' component={ItemInput}/>
                 <Route path= '/items/:id' render={(routerProps) => <Item {...routerProps} items={this.props.items}/>}/>
-                
                 <Route path='/items' render={(routerProps) => <Items {...routerProps} items={this.props.items}/>}/>
                 {/*below is how you pass the props down to the items component */}
                 {/* <Items items={this.props.items}/> */}

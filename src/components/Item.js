@@ -31,7 +31,7 @@ const Item = (props) => {
                         </Card.Text>
                 </Card.Body>
             </Card>
-                <br></br><br></br>
+                <br></br>
             <ItemEdit item={item}/>
                 <br></br><br></br>
             <ExpensesContainer item={item}/>

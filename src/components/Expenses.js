@@ -17,9 +17,8 @@ const Expenses = (props) => {
     }
     return (
         <div>
-            <h5> Expenses </h5>
+            {/* <h5>Expenses</h5> */}
              <Table responsive striped hover variant="dark" size="sm">
-                
                 <thead>
                   <tr >
                     <th>Expense Name</th>
