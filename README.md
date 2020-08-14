@@ -1,3 +1,28 @@
+Investment Tracker is an application where you can keep track of items that you purchase to fixup and resell for a profit.  It tracks the expenses for each item and let you know how much you will need to sell an item for, in order to breakeven.
+
+This is a portfolio project for the React/Redux API section of the Flatiron School Web Development Online program.
+
+
+Getting Started;
+
+Clone the backend repo at git@github.com:COneal81/investment_tracker_backend.git and then install the needed gems: $ bundle install
+
+CD into the directory.
+
+Migrate the database: $ rails db:create && rails db:migrate
+
+Start rails server: $ rails s
+
+Clone the frontend repo at https://github.com/COneal81/im_bored_frontend.git
+
+CD into the directory.
+
+Run npm start
+
+Enjoy!!!
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
