@@ -108,7 +108,7 @@ constructor(props) {
 
                 {/* <Card.Body> */}
                 <form onSubmit={this.handleOnSubmit}>
-                <h3> Edit Item</h3><br></br>
+                <h5> Edit Item</h5><br></br>
                 <input type="text" placeholder="Item Name" value={this.state.item_name} name="item_name" onChange = {this.handleOnChange}/> 
                 {/* <label> Purchase Price</label><br></br> */}
                 <input type="text" placeholder="Purchase Price" value={this.state.purchase_price} name="purchase_price" onChange = {this.handleOnChange}/> 

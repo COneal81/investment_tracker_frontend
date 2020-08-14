@@ -15,29 +15,29 @@
   }
 }
 
-/* .App-header {
+.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: Left;
-  justify-content: left;
-  font-size: calc(10px + 2vmin);
+  justify-content: left;  
+  font-size: calc(1px + 2vmin);
   color: white;
-} */
-
-/* .App-link {
-  color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+ /* .App-link {
+  color: #61dafb;
+} */
+
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-} */
+} */ 
 .card {
   
    margin-left: auto;
@@ -51,3 +51,18 @@
   display: inline-block;
 }
 
+h3,h5{
+  color:#61dafb;
+}
+p{
+  color:#2d3d3d;
+}
+h2{
+  color:#029cc7;
+}
+
+.btn-primary{
+  background-color:#61dafb !important;
+  color:#282c34 !important;
+  border-color: #004c61 !important;
+}

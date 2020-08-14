@@ -19,13 +19,14 @@ const Item = (props) => {
             {/* used a ternary operator because the 1st time the props are 
             // coming through, we do not have access to the props  */}
             
-            <Card style={{ width: '18rem' }}>
+            <Card style={{ width: '30rem' }}>
                 <Card.Body>
-                    <Card.Title><h3>{item ? item.item_name : null}</h3></Card.Title>
+                    <Card.Title><h2>{item ? item.item_name : null}</h2></Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">Purchase Price: ${item ? item.purchase_price : null}</Card.Subtitle>
-                        <Card.Text>
-                            Date Purchased:{item ? item.date_purchased : null}<br></br>
-                            Breakeven if sold at: ${item ? item.breakeven_point : null}
+                        <Card.Text><p>
+                            Date Purchased:{item ? item.date_purchased : null}<br></br><br></br>
+                            <b>Breakeven if sold at: ${item ? item.breakeven_point : null}</b>
+                            </p>
                             {/* we can send props down to the expensesContainer which it can then pass down props to the expenses  */}
                         </Card.Text>
                 </Card.Body>

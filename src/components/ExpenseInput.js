@@ -41,7 +41,7 @@ class ExpenseInput extends React.Component {
                 <Form onSubmit={this.handleOnSubmit}>
                 <Form.Group controlId= "ExpenseInput.ControlInput2">
                 <Form.Row className="expense-input">
-                    <Form.Label><h4>Add Expense</h4></Form.Label>
+                    <Form.Label><h5>Add Expense</h5></Form.Label>
                     <Form.Control 
                         type="text" 
                         placeholder="Expense Name" 
