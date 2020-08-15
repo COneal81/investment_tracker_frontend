@@ -13,7 +13,7 @@ Migrate the database: $ rails db:create && rails db:migrate
 
 Start rails server: $ rails s
 
-Clone the frontend repo at https://github.com/COneal81/im_bored_frontend.git
+Clone the frontend repo at git@github.com:COneal81/investment_tracker_frontend.git
 
 CD into the directory.
 
