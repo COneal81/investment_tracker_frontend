@@ -1,8 +1,4 @@
-// thunk 
-// use to make async requests to the backend
-// its allows us to call dispatch from inside of the actin creator(fetchItems) which 
-// allows the request to finish before dispatching it to our reducer
-// returns a function from the action creator that you can use it other places easily
+
 
 export function fetchItems(action) {
     return (dispatch) => {
