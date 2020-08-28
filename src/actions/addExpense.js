@@ -11,7 +11,6 @@ export const addExpense = (expense, itemId) => {
           body: JSON.stringify(expense)
         })
         .then(response => response.json())
-    //    the item that is coming back will have the expense in it because it is nested
        .then(item => dispatch({type: "ADD_EXPENSE", payload: item}))
 
     }
