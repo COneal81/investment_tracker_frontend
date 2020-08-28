@@ -18,10 +18,6 @@ const NavBar = () => {
    
   </Navbar.Collapse>
 </Navbar>
-
-
-     
-    
  
     )
 }
