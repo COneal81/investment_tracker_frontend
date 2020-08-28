@@ -1,4 +1,3 @@
-// the data arguement is coming from the component ItemInput's setState 
 
 export function addItem(data) {
     
@@ -20,4 +19,3 @@ export function addItem(data) {
     }
 }
 
-// adds to the redux store without having to refetch that data
