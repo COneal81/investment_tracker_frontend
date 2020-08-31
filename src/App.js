@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {connect} from 'react-redux'
+// import {connect} from 'react-redux'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ItemsContainer from './containers/ItemsContainers'
 

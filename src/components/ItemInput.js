@@ -8,12 +8,11 @@ import Container from 'react-bootstrap/Container'
 class ItemInput extends React.Component {
    
     state = {
-        item_name: "",
-        purchase_price: "",
-        date_purchased: "",
-        date_sold: "",
-        // sold: "false",
-        breakeven_point: ""
+        itemName: "",
+        purchasePrice: "",
+        datePurchased: "",
+        dateSold: "",
+        breakevenPoint: ""
     }
 
     handleOnChange = (event) => {
@@ -23,9 +22,11 @@ class ItemInput extends React.Component {
         })
     }
 
-    handleOnSubmit = (event) => {
+    handleOnSubmit = (event) => {  // a c b d
         event.preventDefault()
+        console.log('A')
         this.props.addItem(this.state)
+        console.log('B')
         // calling setState clears the form and sets it back to the initial values for a user to be able to enter a new item
         this.setState({
             item_name: "",

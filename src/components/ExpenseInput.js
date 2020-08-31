@@ -9,7 +9,7 @@ class ExpenseInput extends React.Component {
 
     state = {
         destription: "",
-        expense_amount: "",
+        expenseAmount: "",
         date: ""
     }
 

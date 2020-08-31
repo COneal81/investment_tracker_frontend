@@ -1,6 +1,6 @@
 
 export function addItem(data) {
-    
+    console.log('C')
     return (dispatch) => {
         fetch('http://127.0.0.1:3000/api/v1/items', {
             headers: {
@@ -12,10 +12,13 @@ export function addItem(data) {
         })
         
     .then(resp => resp.json())
-    .then(item => dispatch({
+    .then(item => {
+        console.log('D')
+        dispatch({
         type:"ADD_ITEM",
         payload: item
-    }))
+    })})
     }
+    console.log('E')
 }
 

@@ -1,9 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {editItem} from '../actions/editItem'
-import Button from 'react-bootstrap/Button'
-import Form from 'react-bootstrap/Form'
-import Card from 'react-bootstrap/Card'
+// import Button from 'react-bootstrap/Button'
+// import Form from 'react-bootstrap/Form'
+// import Card from 'react-bootstrap/Card'
 // class component that has a local state that holds the core values
 
 class ItemEdit extends React.Component {
