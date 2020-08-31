@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-
+import Liked from '../components/Liked.js'
 
 import Table from 'react-bootstrap/Table'
 
@@ -16,6 +16,7 @@ const Items = (props) => {
                     <th>Purchase Price</th>
                     <th>Date Purchased</th>
                     <th>Breakeven Point</th>
+                    <th>Likes</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -26,6 +27,7 @@ const Items = (props) => {
                     <td> ${item.purchase_price} </td>
                     <td> {item.date_purchased} </td>
                     <td>${item.breakeven_point}</td>
+                    <td> <Liked/> </td>
                    
                   </tr>
                  )}
